@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AttackPath</title>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">&#10148;</span> AttackPath <small>attack paths to <span id="target"></span></small></div>
+  <div class="legend"><i class="d user"></i>user <i class="d computer"></i>computer <i class="d group"></i>group <i class="d domain"></i>domain <i class="d gold"></i>target</div>
+</header>
+<div class="layout">
+  <section class="stage"><canvas id="cv"></canvas><div class="hint">Click a user to see its cheapest path. Drag nodes to rearrange.</div></section>
+  <aside class="side">
+    <div class="risk">
+      <div class="big" id="pct">0%</div>
+      <div><div class="lbl">of users can reach the target</div><div class="mute" id="counts"></div></div>
+    </div>
+    <h2>Selected attack path</h2>
+    <div id="path" class="path"><p class="mute">Select a user node.</p></div>
+    <h2>Choke points <button id="reset" class="link">reset fixes</button></h2>
+    <div id="chokes"></div>
+    <div id="fixed" class="mute"></div>
+  </aside>
+</div>
+<script src="app.js"></script>
+</body>
+</html>
